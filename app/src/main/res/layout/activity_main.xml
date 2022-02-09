@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/big_boy_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/selected_element"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:gravity="center"
+            android:text="Selected Element: None" />
+
+        <com.example.cs301_hw1.DrawingSurfaceView
+            android:id="@+id/drawing_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3" />
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/scrollbar_text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/red_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Red:" />
+
+                <TextView
+                    android:id="@+id/green_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Green:" />
+
+                <TextView
+                    android:id="@+id/blue_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Blue:" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/scrollbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <SeekBar
+                    android:id="@+id/red_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="255" />
+
+                <SeekBar
+                    android:id="@+id/green_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="255" />
+
+                <SeekBar
+                    android:id="@+id/blue_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="255" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
