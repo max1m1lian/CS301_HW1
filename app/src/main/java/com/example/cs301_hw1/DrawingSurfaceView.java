@@ -62,7 +62,11 @@ public class DrawingSurfaceView extends SurfaceView {
         }
     }
 
-    // Draws a GenericModel object on the screen.
+    /**
+     * Draws a GenericModel on the view.
+     * @param canvas supplied by onDraw method
+     * @param model the model to be drawn
+     */
     public void drawModel(Canvas canvas, GenericModel model) {
 
         Bitmap image = BitmapFactory.decodeResource(this.getResources(),model.getImageId());

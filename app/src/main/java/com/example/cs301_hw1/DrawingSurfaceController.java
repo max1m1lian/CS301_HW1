@@ -34,7 +34,14 @@ public class DrawingSurfaceController implements View.OnTouchListener {
         this.selected_element_text = selected_element_text;
     }
 
-    // Checks through each model in the array and then checks if the user has clicked on it.
+    /**
+     * Checks through every model watched by the view, and determines if the user's touch is within
+     * the hitboxes of any of those models. If it is, it sets the currently selected element
+     * to the model that the user just touched.
+     * @param view
+     * @param motionEvent
+     * @return true :)
+     */
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
 
@@ -62,9 +69,14 @@ public class DrawingSurfaceController implements View.OnTouchListener {
         return true;
     }
 
-    // Important helper method for checking if the user has touched an element.
-    // Returns TRUE if the user has touched an element.
-    // Returns FALSE otherwise.
+    /**
+     * Important helper method for determining if a user has touched a spot occupied by a model.
+     * @param real_view The surface view
+     * @param x The X value of where the user touched
+     * @param y The Y value of where the user touched
+     * @param sample_model The model's position to be referenced
+     * @return TRUE if the user has touched a model: FALSE otherwise.
+     */
     private boolean checkHitbox(DrawingSurfaceView real_view, float x,
                                 float y, GenericModel sample_model) {
 
@@ -83,8 +95,10 @@ public class DrawingSurfaceController implements View.OnTouchListener {
         return false;
     }
 
-    // These methods are called by the SeekBarController objects when their values are
-    // updates. It updates the color values in the GenericModel objects.
+    /**
+     * These methods are called by the SeekBarController objects when the user modifies their
+     * values.
+     */
     public void setRed(int red) {
         if (this.selected_element != null) {
             this.selected_element.setRed(red);

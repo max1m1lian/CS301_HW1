@@ -20,6 +20,13 @@ public class SeekBarController implements SeekBar.OnSeekBarChangeListener {
                         // the surface view can be updated according to the RGB values.
     }
 
+    /**
+     * This method updates the color of the currently selected element when the seekbars are
+     * changed.
+     * @param seekBar
+     * @param i
+     * @param b
+     */
     @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
 

@@ -55,8 +55,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // Helper method for generating a bunch of models to be drawn on the screen. Adds the
-    // models to the given DrawingSurfaceView.
+    /**
+     * Helper method for adding a bunch of models to the given DrawingSurfaceView
+     * @param drawing_view the view for which the models are to be added
+     */
     private void generateModels(DrawingSurfaceView drawing_view) {
         GenericModel banana = new GenericModel(
                 0.35f,0.6f,0.15f,0.35f,
