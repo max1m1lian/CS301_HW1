@@ -41,7 +41,10 @@ public class DrawingSurfaceView extends SurfaceView {
         this.background = BitmapFactory.decodeResource(this.getResources(),R.drawable.background);
     }
 
-
+    /**
+     * Draws all of the models onto the canvas.
+     * @param canvas
+     */
    @Override
     public void onDraw(Canvas canvas) {
 
